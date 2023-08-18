@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <link rel="stylesheet" href="map.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>밥메이트</title>
+
+    <!-- 네이버지도 api -->
+    <script
+      type="text/javascript"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=5zi7rn9ebb"
+    ></script>
+
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="logo"><img src="./../img/밥메이트 로고.png" alt="" /></div>
+
+      <div class="barContainer">
+        <div class="toGoMateMatching">
+          <h5><a href="#"></a>메이트 메칭</h5>
+        </div>
+        <div class="toGoMap">
+          <h5><a href="#"></a>뭐먹지?</h5>
+        </div>
+        <div class="toGoMypage">
+          <h5><a href="#"></a>마이페이지</h5>
+        </div>
+      </div>
+
+      <div id="mapContainer">
+        <div id="map" style="width: 100%; height: 567px"></div>
+      </div>
+
+      <div id="restaurantListContainer">
+        <button id="beforeClickResList">목록보기</button>
+        <div id="afterClickResList" style="display: none">
+          <div id="afterClickResListBar"></div>
+
+          <!-- <tr th:each="restaurant : ${restaurantList}">
+            <img th:src="@{#}" />
+            <h2 th:text="${restaurant.name}"></h2>
+            <span th:text="${restaurnat.menuName}"></span>
+            <span th:text="${restaurant.breakTime}"></span>
+            <h3>메뉴 보러가기 =></h3>
+            <div id="restaurantDivider"></div>
+          </tr> -->
+
+          <!-- <div id="threeCircle"></div>
+        <h2>MENU</h2>
+        <div id="afterClickSeeMenu" style="display: none">
+          <div id="#"></div>
+          <div id="menuList" style="overflow: auto;">
+            <tr th:each="menu" : ${menuList}>
+              <span th:text="${menu.name}"></span>
+              <span th:text="${menu.price}"></span>
+              <div id="menuDivider"></div>
+            </tr>
+          </div>
+        </div> -->
+
+          <!-- api 명세서 나오면 api 부분 및 수정 필요!!!!! -->
+        </div>
+      </div>
+    </div>
+
+    <script src="map.js"></script>
+  </body>
+</html>
